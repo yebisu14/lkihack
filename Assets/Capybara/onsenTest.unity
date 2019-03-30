@@ -342,7 +342,7 @@ GameObject:
   - component: {fileID: 156767256}
   - component: {fileID: 156767255}
   m_Layer: 0
-  m_Name: Audio Source
+  m_Name: SpringClip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -357,7 +357,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2b7c71962e3374faa8108951bc13f67c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4b2a30d4dd27d48e6bad55560f42948b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -617,7 +617,7 @@ GameObject:
   - component: {fileID: 377626673}
   - component: {fileID: 377626672}
   m_Layer: 0
-  m_Name: Audio Source (2)
+  m_Name: AutumnClip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -960,7 +960,7 @@ GameObject:
   - component: {fileID: 556045118}
   - component: {fileID: 556045117}
   m_Layer: 0
-  m_Name: Audio Source (3)
+  m_Name: WinterClip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -975,7 +975,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2b7c71962e3374faa8108951bc13f67c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8683573defc7a4fc29b091f70e2fa595, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1788,7 +1788,7 @@ GameObject:
   - component: {fileID: 1205460286}
   - component: {fileID: 1205460285}
   m_Layer: 0
-  m_Name: Audio Source (1)
+  m_Name: SummerClip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1803,7 +1803,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4b2a30d4dd27d48e6bad55560f42948b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b5ebb694781264576b6b2af12957ee55, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2013,8 +2013,8 @@ GameObject:
   - component: {fileID: 1260247640}
   - component: {fileID: 1260247639}
   - component: {fileID: 1260247638}
-  - component: {fileID: 1260247637}
   - component: {fileID: 1260247636}
+  - component: {fileID: 1260247637}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -2050,7 +2050,6 @@ MonoBehaviour:
   - {fileID: 1205460285}
   - {fileID: 377626672}
   - {fileID: 556045117}
-  _mixRate: 0
 --- !u!81 &1260247638
 AudioListener:
   m_ObjectHideFlags: 0

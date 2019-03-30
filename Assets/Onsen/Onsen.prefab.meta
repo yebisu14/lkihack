@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: 874efaa2f59964f1caa9cb19e3562cf9
+=======
 guid: 1789d0fed1c55a143bbd8a329f671b40
+>>>>>>> origin/origin/uesys/Capybara
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 0
