@@ -8,7 +8,7 @@ public class RotationCamera : MonoBehaviour {
     int   theta;
     int   p_theta   = 1;
     int   nextTime  = 1;
-    int   r         = 1000;
+    int   r         = 200;
 
     float[] val_sin = new float[361];
     float[] val_cos = new float[361];
@@ -36,7 +36,7 @@ public class RotationCamera : MonoBehaviour {
     void Update() {
         countTime += Time.deltaTime;
         // exec/0.1ms
-        if (nextTime < countTime * 50) {
+        if (nextTime < countTime * 5) {
 
             // 円運動
             Vector3 pos = camera.transform.localPosition;
