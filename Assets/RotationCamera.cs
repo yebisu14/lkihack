@@ -16,6 +16,12 @@ public class RotationCamera : MonoBehaviour {
     [SerializeField]
     GameObject camera;
 
+    public int Theta
+    {
+        get { return this.theta; }
+        private set { this.theta = value; }
+    }
+
     void Start () {
         Vector3 pos = camera.transform.localPosition;
         pos.z = 1;
@@ -29,7 +35,6 @@ public class RotationCamera : MonoBehaviour {
         for (i = 0; i <= 360; i++)
         {
             val_cos[i] = Mathf.Cos(i * Mathf.PI / 180);
-            Debug.Log(val_cos[i]);
         }
     }
 
@@ -40,16 +45,14 @@ public class RotationCamera : MonoBehaviour {
 
             // 円運動
             Vector3 pos = camera.transform.localPosition;
-            Debug.Log(pos.x + " " + pos.z);
-
             theta = theta >= 360 ? 0 : theta + p_theta;
             pos.x = -r * (p_theta * (Mathf.PI / 180)) * val_sin[theta];
             pos.z = r  * (p_theta * (Mathf.PI / 180)) * val_cos[theta];
             camera.transform.localPosition = pos;
 
             // カメラ方向
-            camera.transform.localRotation =
-            Quaternion.AngleAxis(-theta+180, Vector3.up);
+            Quaternion newAngle = Quaternion.AngleAxis(-theta + 180, Vector3.up);
+            camera.transform.localRotation = newAngle;
 
             nextTime++;
         }
