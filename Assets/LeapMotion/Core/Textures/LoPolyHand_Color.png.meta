@@ -1,0 +1,116 @@
+fileFormatVersion: 2
+guid: 5daedc5a8f1008648bcfb5931d482c94
+timeCreated: 1459794238
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName: {}
+<<<<<<< HEAD:Assets/KriptoFX/Water2.0/Textures/PC/FalloffRevert.psd.meta
+  externalObjects: {}
+  serializedVersion: 7
+=======
+  serializedVersion: 2
+>>>>>>> origin/origin/uesys/Capybara:Assets/LeapMotion/Core/Textures/LoPolyHand_Color.png.meta
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+<<<<<<< HEAD:Assets/KriptoFX/Water2.0/Textures/PC/FalloffRevert.psd.meta
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 1
+  generateCubemap: 6
+=======
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+>>>>>>> origin/origin/uesys/Capybara:Assets/LeapMotion/Core/Textures/LoPolyHand_Color.png.meta
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+<<<<<<< HEAD:Assets/KriptoFX/Water2.0/Textures/PC/FalloffRevert.psd.meta
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+=======
+    mipBias: -1
+    wrapMode: -1
+>>>>>>> origin/origin/uesys/Capybara:Assets/LeapMotion/Core/Textures/LoPolyHand_Color.png.meta
+  nPOTScale: 1
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 0
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+<<<<<<< HEAD:Assets/KriptoFX/Water2.0/Textures/PC/FalloffRevert.psd.meta
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 2
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 128
+    resizeAlgorithm: 0
+=======
+  alphaIsTransparency: 0
+  textureType: -1
+  buildTargetSettings:
+  - buildTarget: Android
+    maxTextureSize: 256
+>>>>>>> origin/origin/uesys/Capybara:Assets/LeapMotion/Core/Textures/LoPolyHand_Color.png.meta
+    textureFormat: -1
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
+<<<<<<< HEAD:Assets/KriptoFX/Water2.0/Textures/PC/FalloffRevert.psd.meta
+    overridden: 0
+    androidETC2FallbackOverride: 0
+=======
+>>>>>>> origin/origin/uesys/Capybara:Assets/LeapMotion/Core/Textures/LoPolyHand_Color.png.meta
+  spriteSheet:
+    sprites: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 1
+  pSDShowRemoveMatteOption: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

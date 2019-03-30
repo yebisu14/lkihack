@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5ba3b18ea7aa8d745be7cd6b6af8986b
+guid: ef4db02d9fee84cce8136e61609dd720
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}
@@ -13,31 +13,31 @@ TextureImporter:
     borderMipMap: 0
     mipMapsPreserveCoverage: 0
     alphaTestReferenceValue: 0.5
-    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceStart: 2
     mipMapFadeDistanceEnd: 3
   bumpmap:
     convertToNormalMap: 0
-    externalNormalMap: 0
+    externalNormalMap: 1
     heightScale: 0.25
     normalMapFilter: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
-  grayScaleToAlpha: 1
+  grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
   seamlessCubemap: 0
   textureFormat: -1
-  maxTextureSize: 128
+  maxTextureSize: 1024
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
-  nPOTScale: 1
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
   spriteMode: 0
@@ -48,10 +48,10 @@ TextureImporter:
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
-  alphaUsage: 2
+  alphaUsage: 1
   alphaIsTransparency: 0
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 1
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
@@ -60,7 +60,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 2
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 128
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -81,8 +81,8 @@ TextureImporter:
     edges: []
     weights: []
   spritePackingTag: 
-  pSDRemoveMatte: 1
-  pSDShowRemoveMatteOption: 1
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

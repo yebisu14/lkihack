@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 10d9d7936d44847febb54984e353ae34
+=======
+guid: 796d7ba5396da9f4ea7db905fab60cb9
+>>>>>>> origin/origin/uesys/Capybara
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
