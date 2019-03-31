@@ -15,6 +15,7 @@ public class CapybaraController : MonoBehaviour {
     public GameObject leftHandTarget;
     public GameObject rightHand;
     public GameObject rightHandTarget;
+    public bool looking = false;
 
     LeapServiceProvider m_Provider;
 
@@ -87,7 +88,7 @@ public class CapybaraController : MonoBehaviour {
                 capybara.GetComponent<HeadLookController>().target_obj = leftHandTarget;
                 capybara.GetComponent<Animator>().SetBool("look", true);
             }
-                
+            looking = true;   
 
         }
         else if (rightHand.activeSelf)
@@ -121,7 +122,7 @@ public class CapybaraController : MonoBehaviour {
                 capybara.GetComponent<HeadLookController>().target_obj = rightHandTarget;
                 capybara.GetComponent<Animator>().SetBool("look", true);
             }
-
+            looking = true;
         }
         else
         {
@@ -133,7 +134,7 @@ public class CapybaraController : MonoBehaviour {
                 capybara.GetComponent<HeadLookController>().target_obj = capybara.transform.Find("Root/Pelvis/Spine.1/Spine.2/Neck.1/Neck.2/Head/InitLookTarget").gameObject;
                 capybara.GetComponent<Animator>().SetBool("look", false);
             }
-
+            looking = false;
         }
     }
 }

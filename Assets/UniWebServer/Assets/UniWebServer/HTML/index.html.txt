@@ -3,7 +3,7 @@
     <div id="gyro"></div>
 
     <script>
-        var socket = new WebSocket('ws://192.168.255.239:8080/');
+        var socket = new WebSocket('ws://192.168.253.224:8080/');
 
         // 接続時のイベント
         socket.onopen = function (evt) {
