@@ -39,22 +39,22 @@ namespace nmxi.websocket
             string command = System.Text.Encoding.GetEncoding("UTF-8").GetString(b);
             if(command == "spring")
             {
-                rotationCamera.Theta = 135;
+                rotationCamera.Theta = (float)RotationCamera.Season.SPRING;
                 rotationCamera.StopRotate();
                 gyroAlpha = -1;
             }else if(command == "summer")
             {
-                rotationCamera.Theta = 225;
+                rotationCamera.Theta = (float)RotationCamera.Season.SUMMER;
                 rotationCamera.StopRotate();
                 gyroAlpha = -1;
             }else if(command == "autumn")
             {
-                rotationCamera.Theta = 315;
+                rotationCamera.Theta = (float)RotationCamera.Season.AUTUMN;
                 rotationCamera.StopRotate();
                 gyroAlpha = -1;
             }else if(command == "winter")
             {
-                rotationCamera.Theta = 45;
+                rotationCamera.Theta = (float)RotationCamera.Season.WINTER;
                 rotationCamera.StopRotate();
                 gyroAlpha = -1;
             }else if(command == "togglemove")

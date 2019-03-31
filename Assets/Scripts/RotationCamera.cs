@@ -17,6 +17,14 @@ public class RotationCamera : MonoBehaviour {
     [SerializeField]
     GameObject camera;
 
+    public enum Season
+    {
+        SPRING = 135,
+        SUMMER = 225,
+        AUTUMN = 315,
+        WINTER = 45,
+    }
+
     public float Theta
     {
         get { return this.theta; }
