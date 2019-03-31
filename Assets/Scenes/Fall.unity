@@ -553,7 +553,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 19020d2b621f244a49234f57f0d1a498, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6362c3de17e50d5419e03550eec19687, type: 2}
+      objectReference: {fileID: 2100000, guid: 32886655febdc3d4e8b98a6ffdec2cc6, type: 2}
     - target: {fileID: 100000, guid: 19020d2b621f244a49234f57f0d1a498, type: 3}
       propertyPath: m_Name
       value: mushrooms (1)
@@ -4053,7 +4053,7 @@ Prefab:
     - target: {fileID: 2300000, guid: 19020d2b621f244a49234f57f0d1a498, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6362c3de17e50d5419e03550eec19687, type: 2}
+      objectReference: {fileID: 2100000, guid: 32886655febdc3d4e8b98a6ffdec2cc6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19020d2b621f244a49234f57f0d1a498, type: 3}
   m_IsPrefabAsset: 0
