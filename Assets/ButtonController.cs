@@ -60,7 +60,7 @@ public class ButtonController : MonoBehaviour {
         }
         if (ButtonManager.GetButton(ButtonType.LEFT))
         {
-            rotationCamera.Theta += 0.5f;
+            rotationCamera.Theta -= 0.5f;
         }
     }
 }
