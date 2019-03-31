@@ -1,0 +1,52 @@
+<html>
+<body>
+<div id="gyro"></div>
+
+<script>
+    var socket = new WebSocket('ws://192.168.255.239:8080/');
+
+    // 接続時のイベント
+    socket.onopen = function (evt) {
+      console.log('Connected');
+      socket.send('Hello 1');
+      socket.send('Hello 2');
+      socket.send('Hello 3');
+      socket.send('Hello 4');
+    };
+
+    // 切断時のイベント
+    socket.onclose = function (evt) {
+      console.log('Disconnected');
+    };
+
+    // メッセージ受信時のイベント
+    socket.onmessage = function (evt) {
+      console.log(evt.data);
+      if (evt.data === 'Hello 3') {
+        socket.close();
+      }
+    };
+
+    // エラー発生時のイベント
+    socket.onerror = function (evt) {
+      console.log('Error: ' + evt.data);
+    };
+
+
+    window.addEventListener('deviceorientation', function(e) {
+        var str   = '',
+            alpha = e.alpha,
+            beta  = e.beta,
+            gamma = e.gamma;
+
+        str  = 'alpha = ' + alpha + '\n';
+        str += 'beta = '  + beta + '\n';
+        str += 'gamma = ' + gamma + '\n';
+
+        document.getElementById("gyro").innerHTML = str;
+        
+        socket.send({"alpha": e.alpha});
+    }, false);
+</script>
+</body>
+</html>
