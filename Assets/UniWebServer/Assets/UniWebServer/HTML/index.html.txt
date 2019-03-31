@@ -8,10 +8,6 @@
     // 接続時のイベント
     socket.onopen = function (evt) {
       console.log('Connected');
-      socket.send('Hello 1');
-      socket.send('Hello 2');
-      socket.send('Hello 3');
-      socket.send('Hello 4');
     };
 
     // 切断時のイベント
@@ -45,8 +41,15 @@
 
         document.getElementById("gyro").innerHTML = str;
         
-        socket.send({"alpha": e.alpha});
+        //socket.send("" + e.alpha);
     }, false);
 </script>
+
+<input type="button" value="ToggleMove" onclick="socket.send('togglemove');"/>
+<input type="button" value="Spring" onclick="socket.send('spring');"/>
+<input type="button" value="Summer" onclick="socket.send('summer');"/>
+<input type="button" value="Autumn" onclick="socket.send('autumn');"/>
+<input type="button" value="Winter" onclick="socket.send('winter');"/>
+<input type="button" value="Mode change" onclick="socket.send('nextscene');"/>
 </body>
 </html>
