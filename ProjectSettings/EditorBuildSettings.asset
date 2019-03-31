@@ -8,4 +8,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/mainScene2.unity
     guid: 7e285c931ea8b6843b0b388158209b49
+  - enabled: 1
+    path: Assets/mainScene.unity
+    guid: 8fa127343fa9dc54fbdce75be63f8c06
+  - enabled: 1
+    path: Assets/Scenes/Spring.unity
+    guid: 1f3d063bda7b8b247bfe15bf30500863
+  - enabled: 1
+    path: Assets/Scenes/Summer.unity
+    guid: 7ded8d4d89eb11b46b4e0bce13482a16
+  - enabled: 1
+    path: Assets/Scenes/Winter.unity
+    guid: 3b767ae699415c7439b38efc0f3acd2c
+  - enabled: 1
+    path: Assets/Scenes/Fall.unity
+    guid: 965e2cffe453ffe4a861ffd6cfd88221
   m_configObjects: {}

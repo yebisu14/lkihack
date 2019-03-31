@@ -22179,6 +22179,25 @@ Prefab:
       propertyPath: quiltRT
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 20296317210224496, guid: 963d91fc6705d4198b1aedd168c29865,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114694016392810402, guid: 963d91fc6705d4198b1aedd168c29865,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1682524345968696, guid: 963d91fc6705d4198b1aedd168c29865, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114658930709675958, guid: 963d91fc6705d4198b1aedd168c29865,
+        type: 2}
+      propertyPath: SceneName
+      value: Spring
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 963d91fc6705d4198b1aedd168c29865, type: 2}
   m_IsPrefabAsset: 0
