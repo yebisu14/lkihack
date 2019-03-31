@@ -28,7 +28,7 @@ public class CrossFadePlayer : MonoBehaviour {
 	
 	void Update ()
     {
-        int theta = rotationCamera.Theta;
+        float theta = rotationCamera.Theta;
         if (theta <= 2)
         {
             _audios[0].volume = 1f - (8 + theta)/10f;
