@@ -162,6 +162,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1899847613580648
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4917647875808986}
+  - component: {fileID: 114876740093874330}
+  - component: {fileID: 114694176775748612}
+  m_Layer: 0
+  m_Name: LookingGlassButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &4017629466563134
 Transform:
   m_ObjectHideFlags: 1
@@ -258,6 +275,7 @@ Transform:
   - {fileID: 4805517707560824}
   - {fileID: 4811820856269976}
   - {fileID: 4465827234085962}
+  - {fileID: 4917647875808986}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -286,6 +304,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4683505879610638}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4917647875808986
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1899847613580648}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4683505879610638}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &20296317210224496
 Camera:
@@ -888,6 +919,18 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: LookingGlass.Holoplay+ViewRenderEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114694176775748612
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1899847613580648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 184d8cea61b464bc2a5a546a62caee1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 1778217364235446}
 --- !u!114 &114722845447436568
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -917,6 +960,18 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: nmxi.websocket.server.BytesEvent, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114876740093874330
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1899847613580648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ecd3186c272db84e911e620ec0f7492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emulateWithKeyboard: 1
 --- !u!124 &124743433146502698
 Behaviour:
   m_ObjectHideFlags: 1
