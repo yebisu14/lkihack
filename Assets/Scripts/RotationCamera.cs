@@ -8,7 +8,7 @@ public class RotationCamera : MonoBehaviour {
     float   theta;
     float   p_theta   = 1f;
     float   nextTime  = 1;
-    float   r         = 1000;
+    float   r         = 900;
 
     float[] val_sin = new float[361];
     float[] val_cos = new float[361];
