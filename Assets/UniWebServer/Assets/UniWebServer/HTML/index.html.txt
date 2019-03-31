@@ -1,56 +1,56 @@
 <html>
 <body>
-    <div id="gyro"></div>
-
     <script>
-        var socket = new WebSocket('ws://192.168.253.224:8080/');
+        socket = null;
+        function connection(){
+            socket = new WebSocket(document.getElementById("url").value);
 
-        // 接続時のイベント
-        socket.onopen = function (evt) {
-          console.log('Connected');
-        };
+            socket.onopen = function (evt) {
+                console.log('Connected');
+                
+                document.getElementById("connecter").style.visibility ="hidden";
+                document.getElementById("panel").style.visibility ="visible";
+            };
 
-        // 切断時のイベント
-        socket.onclose = function (evt) {
-          console.log('Disconnected');
-        };
+            socket.onclose = function (evt) {
+              console.log('Disconnected');
+                
+                document.getElementById("panel").style.visibility ="hidden";
+                document.getElementById("connecter").style.visibility ="visible";
+            };
 
-        // メッセージ受信時のイベント
-        socket.onmessage = function (evt) {
-          console.log(evt.data);
-          if (evt.data === 'Hello 3') {
-            socket.close();
-          }
-        };
+            socket.onmessage = function (evt) {
+              console.log(evt.data);
+              if (evt.data === 'Hello 3') {
+                socket.close();
+              }
+            };
 
-        // エラー発生時のイベント
-        socket.onerror = function (evt) {
-          console.log('Error: ' + evt.data);
-        };
+            socket.onerror = function (evt) {
+              console.log('Error: ' + evt.data);
+            };
+        }
 
 
         window.addEventListener('deviceorientation', function(e) {
-            var str   = '',
-                alpha = e.alpha,
-                beta  = e.beta,
-                gamma = e.gamma;
-
-            str  = 'alpha = ' + alpha + '\n';
-            str += 'beta = '  + beta + '\n';
-            str += 'gamma = ' + gamma + '\n';
-
-            document.getElementById("gyro").innerHTML = str;
-            
-            socket.send("" + e.alpha);
+            if (socket != null){
+                socket.send("" + e.alpha);
+            }
         }, false);
     </script>
-
-    <input type="button" value="ToggleMove" onclick="socket.send('togglemove');"/>
-    <input type="button" value="Spring" onclick="socket.send('spring');"/>
-    <input type="button" value="Summer" onclick="socket.send('summer');"/>
-    <input type="button" value="Autumn" onclick="socket.send('autumn');"/>
-    <input type="button" value="Winter" onclick="socket.send('winter');"/>
-    <input type="button" value="Mode change" onclick="socket.send('nextscene');"/>
-
+    
+    <div class="center" id="connecter">
+        <p><input id='url' type='text' value='ws://192.168.255.239:8080/' style="width:100%;font-size:400%;"/></p>
+        <p><input type="button" value="Connect" onclick="connection();" style="width:100%;font-size:400%;"/></p>
+    </div>
+    
+    <div class="center" id="panel" style="visibility: hidden;">
+        <p><input type="button" value="ToggleMove" onclick="socket.send('togglemove');" style="width:100%;font-size:400%;"/></p>
+        <p><input type="button" value="Spring" onclick="socket.send('spring');" style="width:100%;font-size:400%;"/></p>
+        <p><input type="button" value="Summer" onclick="socket.send('summer');" style="width:100%;font-size:400%;"/></p>
+        <p><input type="button" value="Autumn" onclick="socket.send('autumn');" style="width:100%;font-size:400%;"/></p>
+        <p><input type="button" value="Winter" onclick="socket.send('winter');" style="width:100%;font-size:400%;"/></p>
+        <p><input type="button" value="Mode change" onclick="socket.send('nextscene');" style="width:100%;font-size:400%;"/></p>
+    </div>
 </body>
 </html>
