@@ -51,7 +51,6 @@ public class CrossFadePlayer : MonoBehaviour {
         }
         else if (82 < theta && theta < 93)
         {
-            Debug.Log(_audios[2].volume);
             _audios[1].volume = (92 - theta) / 10f;
             _audios[2].volume = 1f - (92 - theta) / 10f;
         }
