@@ -29,10 +29,5 @@ namespace nmxi.websocket
         {
             Debug.Log(System.Text.Encoding.GetEncoding("UTF-8").GetString(b));
         }
-
-        public void OnReceiveBytess(BytesEvent e)
-        {
-            //Debug.Log(System.Text.Encoding.GetEncoding("Shift_JIS").GetString(e.));
-        }
     }
 }
