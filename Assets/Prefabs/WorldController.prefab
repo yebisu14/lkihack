@@ -373,7 +373,7 @@ AudioListener:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1682524345968696}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!81 &81635496538892314
 AudioListener:
   m_ObjectHideFlags: 1
@@ -829,6 +829,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d284c2c3e811e4da19bb10cb16fe531e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera: {fileID: 1778217364235446}
+  SceneName: LookingCapybara
 --- !u!114 &114694016392810402
 MonoBehaviour:
   m_ObjectHideFlags: 1

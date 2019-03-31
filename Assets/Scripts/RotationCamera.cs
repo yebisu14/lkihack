@@ -22,6 +22,10 @@ public class RotationCamera : MonoBehaviour {
         get { return this.theta; }
         set { this.theta = value; }
     }
+    public bool Move
+    {
+        get { return this.move; }
+    }
 
     void Start () {
         
