@@ -1,27 +1,41 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Leap;
+using Leap.Unity;
 
 public class CapybaraController : MonoBehaviour {
 
-    Animator ani;
-    HeadLookController hlc;
-    GameObject initLookTarget;
-    public GameObject leftHand;
-    public GameObject rightHand;
-    bool targetFlag = false;
+    public GameObject[] capybaras;
 
-	// Use this for initialization
-	void Start () {
-        ani = GetComponent<Animator>();
-        hlc = GetComponent<HeadLookController>();
-        //initLookTarget = this.gameObject.transform.Find("Root/Pelvis/Spine.1/Spine.2/Neck.1/Neck.2/Head").gameObject;
-        //initLookTargetPosition = initLookTarget.transform.position + this.gameObject.transform.forward;7
-        GameObject head = this.gameObject.transform.Find("Root/Pelvis/Spine.1/Spine.2/Neck.1/Neck.2/Head").gameObject;
-        initLookTarget = new GameObject("Empty Game Object");
-        initLookTarget.transform.position = head.transform.position + head.transform.up;
-        initLookTarget.transform.parent = head.transform;
-        hlc.target_obj = initLookTarget;
+    /*Animator ani;
+    HeadLookController hlc;
+    GameObject initLookTarget;*/
+    public GameObject leftHand;
+    public GameObject leftHandTarget;
+    public GameObject rightHand;
+    public GameObject rightHandTarget;
+
+    LeapServiceProvider m_Provider;
+
+    // Use this for initialization
+    void Start () {
+        foreach(GameObject capybara in capybaras)
+        {
+            /*ani = capybara.GetComponent<Animator>();
+            hlc = capybara.GetComponent<HeadLookController>();
+            hlc.target_obj = initLookTarget;*/
+            
+            //GameObject head = this.gameObject.transform.Find("Root/Pelvis/Spine.1/Spine.2/Neck.1/Neck.2/Head").gameObject;
+            GameObject head = capybara.transform.Find("Root/Pelvis/Spine.1/Spine.2/Neck.1/Neck.2/Head").gameObject;
+            GameObject initLookTarget = new GameObject("InitLookTarget");
+            initLookTarget.transform.position = head.transform.position + head.transform.up;
+            initLookTarget.transform.parent = head.transform;
+            capybara.GetComponent<HeadLookController>().target_obj = initLookTarget;
+            //hlc.target_position = initLookTarget.transform.position;
+        }
+
+        m_Provider = GameObject.Find("LeapHandController").GetComponent<LeapServiceProvider>();
     }
 	
 	// Update is called once per frame
@@ -45,21 +59,81 @@ public class CapybaraController : MonoBehaviour {
         }*/
         if (leftHand.activeSelf)
         {
-            hlc.target_obj = leftHand;
-            //hlc.target_position = leftHand.transform.position;
-            ani.SetBool("look", true);
+            Frame frame = m_Provider.CurrentFrame;
+
+            // 左手を取得する
+            Hand hands = null;
+            foreach (Hand hand in frame.Hands)
+            {
+                if (hand.IsLeft)
+                {
+                    hands = hand;
+                    break;
+                }
+            }
+
+            if (hands == null)
+            {
+                return;
+            }
+
+            leftHandTarget.transform.position = new Vector3(hands.PalmPosition.x, hands.PalmPosition.y, hands.PalmPosition.z);
+
+            foreach (GameObject capybara in capybaras)
+            {
+                /*hlc.target_obj = leftHandTarget;
+                //hlc.target_position = new Vector3(hands.PalmPosition.x, hands.PalmPosition.y, hands.PalmPosition.z);
+                ani.SetBool("look", true);*/
+                capybara.GetComponent<HeadLookController>().target_obj = leftHandTarget;
+                capybara.GetComponent<Animator>().SetBool("look", true);
+            }
+                
+
         }
         else if (rightHand.activeSelf)
         {
-            hlc.target_obj = rightHand;
-            //hlc.target_position = rightHand.transform.position;
-            ani.SetBool("look", true);
+            Frame frame = m_Provider.CurrentFrame;
+
+            // 右手を取得する
+            Hand hands = null;
+            foreach (Hand hand in frame.Hands)
+            {
+                if (hand.IsRight)
+                {
+                    hands = hand;
+                    break;
+                }
+            }
+
+            if (hands == null)
+            {
+                return;
+            }
+
+            
+            rightHandTarget.transform.position = new Vector3(hands.PalmPosition.x, hands.PalmPosition.y, hands.PalmPosition.z);
+
+            foreach (GameObject capybara in capybaras)
+            {
+                /*//hlc.target_position = new Vector3(hands.PalmPosition.x, hands.PalmPosition.y, hands.PalmPosition.z);
+                hlc.target_obj = rightHandTarget;
+                ani.SetBool("look", true);*/
+                capybara.GetComponent<HeadLookController>().target_obj = rightHandTarget;
+                capybara.GetComponent<Animator>().SetBool("look", true);
+            }
+
         }
         else
         {
-            hlc.target_obj = initLookTarget;
-            //hlc.target_position = initLookTargetPosition;
-            ani.SetBool("look", false);
+            foreach (GameObject capybara in capybaras)
+            {
+                /*hlc.target_obj = initLookTarget;
+                //hlc.target_position = initLookTarget.transform.position;
+                ani.SetBool("look", false);*/
+                capybara.GetComponent<HeadLookController>().target_obj = capybara.transform.Find("Root/Pelvis/Spine.1/Spine.2/Neck.1/Neck.2/Head/InitLookTarget").gameObject;
+                capybara.GetComponent<Animator>().SetBool("look", false);
+            }
+
         }
     }
 }
