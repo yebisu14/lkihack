@@ -2,6 +2,7 @@
 <body>
     <script>
         socket = null;
+        cnt = 0;
         function connection(){
             socket = new WebSocket(document.getElementById("url").value);
 
@@ -34,13 +35,17 @@
 
         window.addEventListener('deviceorientation', function(e) {
             if (socket != null){
-                socket.send("" + e.alpha);
+                if(cnt > 15){
+                    socket.send("" + e.alpha);
+                    cnt = 0;
+                }
+                cnt++;
             }
         }, false);
     </script>
     
     <div class="center" id="connecter">
-        <p><input id='url' type='text' value='ws://192.168.255.239:8080/' style="width:100%;font-size:400%;"/></p>
+        <p><input id='url' type='text' value='ws://192.168.254.202:8080/' style="width:100%;font-size:400%;"/></p>
         <p><input type="button" value="Connect" onclick="connection();" style="width:100%;font-size:400%;"/></p>
     </div>
     

@@ -19,10 +19,10 @@ public class RotationCamera : MonoBehaviour {
 
     public enum Season
     {
-        SPRING = 135,
-        SUMMER = 225,
-        AUTUMN = 315,
-        WINTER = 45,
+        SPRING = 315,
+        SUMMER = 45,
+        AUTUMN = 135,
+        WINTER = 225,
     }
 
     public float Theta

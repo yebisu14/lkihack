@@ -39,6 +39,7 @@ namespace nmxi.websocket
             string command = System.Text.Encoding.GetEncoding("UTF-8").GetString(b);
             if(command == "spring")
             {
+                Debug.Log(command);
                 rotationCamera.Theta = (float)RotationCamera.Season.SPRING;
                 rotationCamera.StopRotate();
                 gyroAlpha = -1;

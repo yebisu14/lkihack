@@ -73809,9 +73809,30 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 1.839
       objectReference: {fileID: 0}
+    - target: {fileID: 114658930709675958, guid: 963d91fc6705d4198b1aedd168c29865,
+        type: 2}
+      propertyPath: SceneName
+      value: Spring
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 963d91fc6705d4198b1aedd168c29865, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &1960910079 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1517426645764070, guid: 963d91fc6705d4198b1aedd168c29865,
+    type: 2}
+  m_PrefabInternal: {fileID: 1960910078}
+--- !u!114 &1960910080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1960910079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 561641c7550999c46b6bf27ecf7e1661, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1972430018
 GameObject:
   m_ObjectHideFlags: 0
